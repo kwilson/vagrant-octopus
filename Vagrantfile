@@ -30,19 +30,19 @@ Vagrant.configure(2) do |config|
 
   config.vm.define "dev" do |dev|
     dev.vm.network "private_network", ip: "192.168.100.10"
-    dev.vm.host_name = "phoenix.dev"
+    dev.vm.host_name = "vagranttests.dev"
     dev.vm.network :forwarded_port, guest: 5985, host: 5985, id: "winrm", auto_correct: true
   end
 
   config.vm.define "fat" do |fat|
     fat.vm.network "private_network", ip: "192.168.100.11"
-    fat.vm.host_name = "phoenix.fat"
+    fat.vm.host_name = "vagranttests.fat"
     fat.vm.network :forwarded_port, guest: 5985, host: 5986, id: "winrm", auto_correct: true
   end
 
   config.vm.define "sat" do |sat|
     sat.vm.network "private_network", ip: "192.168.100.12"
-    sat.vm.host_name = "phoenix.sat"
+    sat.vm.host_name = "vagranttests.sat"
     sat.vm.network :forwarded_port, guest: 5985, host: 5987, id: "winrm", auto_correct: true
   end
 
