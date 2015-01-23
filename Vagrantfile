@@ -9,7 +9,7 @@ end
 
 if ! File.exists?('./resources/Octopus.Tentacle.2.6.0.778-x64.msi')
   puts 'Octopus Tentacle installer could not be found!'
-  puts "Please run:\n  wget http://download.octopusdeploy.com/octopus/Octopus.2.6.0.778-x64.msi"
+  puts "Please run:\n  wget http://download.octopusdeploy.com/octopus/Octopus.Tentacle.2.6.0.778-x64.msi"
   exit 1
 end
 
